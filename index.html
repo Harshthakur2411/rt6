@@ -1,0 +1,62 @@
+<html>
+<head>
+  <title>Registration Form Website</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function showMessage(event) {
+      event.preventDefault(); // form submit hone se rokta hai (page refresh nahi hoga)
+      document.querySelector(".result h3").innerText = "Form Submitted Successfully ✅";
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <form onsubmit="showMessage(event)">
+      <div class="user-detail">
+        <div class="input-box">
+          <span class="detail">Full Name</span>
+          <input type="text" placeholder="Enter your name" required>
+        </div>
+        <div class="input-box">
+          <span class="detail">Username</span>
+          <input type="text" placeholder="Enter your username" required>
+        </div>
+        <div class="input-box">
+          <span class="detail">Phone Number</span>
+          <input type="number" placeholder="Enter your phone number" required>
+        </div>
+        <div class="input-box">
+          <span class="detail">Email</span>
+          <input type="email" placeholder="Enter your email" required>
+        </div>
+        <div class="input-box">
+          <span class="detail">Password</span>
+          <input type="password" placeholder="Enter your password" required>
+        </div>
+        <div class="input-box">
+          <span class="detail">Re-enter your password</span>
+          <input type="password" placeholder="Re-enter your password" required>
+        </div>
+
+        <div class="gender-detail">
+          <div class="gender-title">Gender</div>
+          <div class="goption">
+            <input type="radio" name="gender" value="Male" required> Male
+            <input type="radio" name="gender" value="Female" required> Female
+            <input type="radio" name="gender" value="Prefer not to say" required> Prefer not to say
+          </div>
+        </div>
+
+        <div class="btn">
+          <input type="submit" value="Register">
+        </div>
+      </div>
+    </form>
+
+    <div class="result">
+      <h3></h3>
+    </div>
+  </div>
+</body>
+</html>
